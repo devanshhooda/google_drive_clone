@@ -1,0 +1,26 @@
+#addFolderButton {
+    align-content: center;
+    width: 200px;
+    background-color: azure;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.mainDiv {
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+div [purpose='name'] {
+    border: 1px solid blue;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.folderDiv [action] {
+    text-decoration: underline;
+}
