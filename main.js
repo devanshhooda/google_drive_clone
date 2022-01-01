@@ -14,21 +14,30 @@
 
         let divFolderTemplate = mainTemplateSelector.content.querySelector(".folderDiv");
         let divFolder = document.importNode(divFolderTemplate, true);
+        let divFolderName = divFolder.querySelector("[purpose='name']");
+
+        divFolderName.innerHTML = folderName;
 
         divFolder.setAttribute("folderId", ++folderId);
 
-        let deletButtonSelector = divFolder.querySelector("span[action='delete']");
+        let editButtonSelector = divFolder.querySelector("[action='edit']");
+        editButtonSelector.addEventListener("click", function() {
+            let folderNewName = prompt("Enter the new name for folder");
+
+            if (folderNewName != null) {
+                divFolderName.innerHTML = folderNewName;
+            }
+        });
+
+        let deletButtonSelector = divFolder.querySelector("[action='delete']");
         deletButtonSelector.addEventListener("click", function() {
-            let deleteConfirmed = confirm("Do you want to delete " + folderName + " folder ?");
+            let deleteConfirmed = confirm("Do you want to delete " + divFolderName.innerHTML + " folder ?");
 
             if (deleteConfirmed == true) {
                 mainDivSelector.removeChild(divFolder);
             }
         });
 
-        let divFolderName = divFolder.querySelector("[purpose='name']");
-
-        divFolderName.innerHTML = folderName;
         mainDivSelector.appendChild(divFolder);
     });
 

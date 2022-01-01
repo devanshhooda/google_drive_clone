@@ -27,6 +27,7 @@
 .folderDiv [action] {
     text-decoration: underline;
     color: black;
+    margin-left: 10px;
 }
 
 [purpose=name] {
