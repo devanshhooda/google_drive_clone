@@ -11,16 +11,21 @@
 
 <body>
     <button id="addFolderButton">Add folder</button>
+    <div id="divBreadCrumb">
+        <a class="path">Root</a>
+    </div>
     <div class="mainDiv">
         <template id="mainTemplate">
             <div class="folderDiv">
                 <span action="edit">edit</span>
                 <span action="delete">delete</span>
+                <span action="view">view</span>
                 <div purpose="name"></div>
             </div>
+            <a class="path"></a>
         </template>
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>

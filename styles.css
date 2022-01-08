@@ -6,6 +6,11 @@
     margin-left: 500px;
 }
 
+#addFolderButton:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
 .mainDiv {
     border: 2px solid black;
     margin: 5px;
@@ -14,11 +19,10 @@
 }
 
 .folderDiv {
-    width: 100vw;
     border: 2px solid blue;
     border-radius: 10px;
     height: 100px;
-    width: 100px;
+    width: 150px;
     margin: 5px;
     padding: 5px;
     background-color: azure;
@@ -28,8 +32,33 @@
     text-decoration: underline;
     color: black;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 [purpose=name] {
     margin-top: 50px;
+    padding-left: 10px;
+    display: flex;
+}
+
+#divBreadCrumb {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.path {
+    padding: 10px;
+    color: blue;
+    cursor: pointer;
+    background-color: bisque;
+    border: 1px solid black;
+}
+
+.path:hover {
+    color: black;
+    cursor: pointer;
+    background-color: burlywood;
 }
